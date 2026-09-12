@@ -11,7 +11,7 @@ body {
     line-height: 1.7;
 }
 
-/* Navbar ธีมสีชมพูเข้ม */
+/* Navbar ธีมสีชมพู */
 .navbar {
     background-color: #ff85a2;
     display: flex;
@@ -42,7 +42,6 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Container หลัก */
 .page-container {
     width: 90%;
     max-width: 850px;
@@ -50,7 +49,6 @@ body {
     padding: 0 10px;
 }
 
-/* หัวข้อประจำหน้า */
 .heading {
     font-size: 30px;
     font-weight: bold;
@@ -73,7 +71,6 @@ body {
     border-radius: 2px;
 }
 
-/* Card และ Box */
 .profile-card, .content-card, .contact-box {
     background: #ffffff;
     border-radius: 16px;
@@ -83,142 +80,35 @@ body {
     border-top: 5px solid #ff85a2;
 }
 
-.content-card h3 {
-    font-size: 20px;
-    color: #ff5c8a;
-    margin-bottom: 12px;
-}
-
-/* รูปภาพ */
-.profile-img, .content-img {
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 14px;
-    display: block;
-    margin: 0 auto 20px auto;
-    box-shadow: 0 5px 15px rgba(255, 133, 162, 0.25);
-}
-
-/* รายการจุด bullets */
-ul {
-    padding-left: 20px;
-    list-style-type: none;
-}
-
-ul li {
-    font-size: 17px;
-    margin-bottom: 12px;
-    position: relative;
-    padding-left: 25px;
-}
-
-ul li::before {
-    content: "♥";
-    color: #ff85a2;
-    font-size: 18px;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-/* หน้าปก & รายละเอียดส่วนตัว */
-.profile-details {
-    text-align: center;
-}
-
-.profile-details h2 {
-    font-size: 22px;
-    color: #ff5c8a;
-    margin-bottom: 8px;
-}
-
-.profile-details h3 {
-    font-size: 16px;
-    color: #666;
-    font-weight: normal;
-    margin-bottom: 5px;
-}
-
-/* ติดต่อ */
-.contact-box h2 {
-    font-size: 20px;
-    color: #ff5c8a;
-    margin-bottom: 15px;
-    border-bottom: 2px dashed #ffe0e6;
-    padding-bottom: 8px;
-}
-
-.contact-box p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.contact-box a {
-    color: #ff5c8a;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-box a:hover {
-    text-decoration: underline;
-}
-
-/* คำนำ */
-.foreword-p {
-    font-size: 17px;
-    color: #4a3e3e;
-    line-height: 1.8;
-    text-indent: 2.5em;
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
-.foreword-author {
-    margin-top: 35px;
-    text-align: right;
-}
-
-.foreword-author .author-label {
-    font-weight: bold;
-    color: #ff5c8a;
-    margin-right: 6px;
-}
-
-.foreword-author .author-name {
-    color: #ff85a2;
-}
-
-/* การศึกษา */
-.edu-card p {
-    font-size: 17px;
-    margin-bottom: 16px;
-    line-height: 1.6;
+/* ------------------------------------------
+   ส่วนตราสัญลักษณ์/รูปภาพมหาวิทยาลัย
+   ------------------------------------------ */
+.university-logo-container {
     display: flex;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
-    align-items: center;
+    margin: 15px 0 20px 0;
 }
 
-.edu-card .edu-level {
-    font-weight: bold;
-    color: #ff5c8a;
-    margin-right: 8px;
-    white-space: nowrap;
+.university-item {
+    text-align: center;
+    flex: 1;
+    min-width: 140px;
 }
 
-.edu-card .school-name {
-    color: #555;
+.university-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px auto;
+    filter: drop-shadow(0 4px 6px rgba(255, 133, 162, 0.3));
+    transition: transform 0.25s ease;
 }
 
-/* ความสนใจ */
-.interest-single-p {
-    font-size: 17px;
-    color: #4a3e3e;
-    line-height: 1.8;
-    text-indent: 2.5em;
-    text-align: justify;
-    margin-bottom: 15px;
+.university-logo:hover {
+    transform: scale(1.05);
 }
 
 .target-card-center {
@@ -232,58 +122,31 @@ ul li::before {
 }
 
 .target-text-single-line {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
+    margin-bottom: 15px;
 }
 
 .target-text-single-line .faculty-name {
     font-weight: bold;
     color: #ff5c8a;
-    display: inline;
-    margin-right: 8px;
+    display: block;
 }
 
 .target-text-single-line .university-name {
     color: #666;
-    display: inline;
+    display: block;
 }
 
-/* กิจกรรม */
-.activity-card {
-    text-align: center;
-    padding: 30px 25px;
-    margin-bottom: 25px;
-}
-
-.activity-img-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.activity-img {
-    max-width: 450px;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
-}
-
-.activity-desc {
-    font-size: 16px;
-    color: #4a3e3e;
-    line-height: 1.7;
-    text-align: left;
-}
-
-/* ทักษะ */
+/* ------------------------------------------
+   ส่วนรูปภาพทักษะ/ความสามารถพิเศษ
+   ------------------------------------------ */
 .skills-single-card {
     padding: 35px 40px;
 }
 
 .skill-item {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .skill-item:last-child {
@@ -295,7 +158,7 @@ ul li::before {
     font-weight: bold;
     color: #ff5c8a;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     position: relative;
     padding-left: 22px;
 }
@@ -307,6 +170,26 @@ ul li::before {
     position: absolute;
     left: 0;
     top: -1px;
+}
+
+.skill-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-img {
+    width: 100%;
+    max-width: 450px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.skill-img:hover {
+    transform: scale(1.02);
 }
 
 /* Responsive */
@@ -321,7 +204,11 @@ ul li::before {
     .heading {
         font-size: 24px;
     }
-    .edu-card p, .activity-desc, ul li, .foreword-p, .interest-single-p {
-        font-size: 15px;
+    .skill-img {
+        height: 180px;
+    }
+    .university-logo {
+        width: 90px;
+        height: 90px;
     }
 }
