@@ -1,3 +1,6 @@
+/* ==========================================
+   Global & Typography Settings
+   ========================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,14 +9,16 @@
 
 body {
     font-family: 'Sarabun', 'Tahoma', sans-serif;
-    background-color: #fff5f7;
-    color: #4a3e3e;
+    background-color: #fff5f7; /* ชมพูอ่อนพาสเทล */
+    color: #4a3b40;
     line-height: 1.7;
 }
 
-/* Navbar ธีมสีชมพู */
+/* ==========================================
+   Navbar (แถบเมนูสีชมพู)
+   ========================================== */
 .navbar {
-    background-color: #ff85a2;
+    background-color: #ff8fa3; /* สีชมพูน่ารักหลัก */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +26,7 @@ body {
     padding: 12px 20px;
     position: sticky;
     top: 0;
-    box-shadow: 0 3px 10px rgba(255, 133, 162, 0.2);
+    box-shadow: 0 4px 12px rgba(255, 143, 163, 0.25);
     z-index: 1000;
 }
 
@@ -31,21 +36,24 @@ body {
     padding: 8px 16px;
     font-size: 15px;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 20px; /* ขอบมนน่ารัก */
     margin: 3px 5px;
     transition: all 0.25s ease;
     white-space: nowrap;
 }
 
 .navbar a:hover, .navbar a.active {
-    background-color: #ff5c8a;
+    background-color: #ff4d6d; /* สีชมพูเข้มสดใส */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* ==========================================
+   Layout Containers & Headers
+   ========================================== */
 .page-container {
     width: 90%;
     max-width: 850px;
-    margin: 40px auto;
+    margin: 35px auto;
     padding: 0 10px;
 }
 
@@ -53,7 +61,7 @@ body {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    color: #ff5c8a;
+    color: #ff4d6d;
     margin-bottom: 25px;
     position: relative;
     padding-bottom: 10px;
@@ -67,86 +75,242 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #ff85a2;
-    border-radius: 2px;
+    background-color: #ff8fa3;
+    border-radius: 4px;
 }
 
+/* ==========================================
+   Card Styling
+   ========================================== */
 .profile-card, .content-card, .contact-box {
     background: #ffffff;
     border-radius: 16px;
     padding: 35px 40px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.2);
-    border-top: 5px solid #ff85a2;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.2);
+    border-top: 5px solid #ff8fa3;
 }
 
-/* ------------------------------------------
-   ส่วนตราสัญลักษณ์/รูปภาพมหาวิทยาลัย
-   ------------------------------------------ */
-.university-logo-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 15px 0 20px 0;
+.content-card h3 {
+    font-size: 20px;
+    color: #ff4d6d;
+    margin-bottom: 12px;
 }
 
-.university-item {
-    text-align: center;
-    flex: 1;
-    min-width: 140px;
-}
-
-.university-logo {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+/* ==========================================
+   Profile & Content Images
+   ========================================== */
+.profile-img, .content-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
     display: block;
-    margin: 0 auto 10px auto;
-    filter: drop-shadow(0 4px 6px rgba(255, 133, 162, 0.3));
-    transition: transform 0.25s ease;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 6px 15px rgba(255, 143, 163, 0.25);
+    border: 3px solid #fff0f3;
 }
 
-.university-logo:hover {
-    transform: scale(1.05);
+/* Lists Styling */
+ul {
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 17px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 28px;
+}
+
+ul li::before {
+    content: "♥";
+    color: #ff758f;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+}
+
+/* Contact Section */
+.contact-box h2 {
+    font-size: 22px;
+    color: #ff4d6d;
+    margin-bottom: 20px;
+    border-bottom: 2px dashed #ffccd5;
+    padding-bottom: 10px;
+}
+
+.contact-box p {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.contact-box a {
+    color: #ff4d6d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Interest Page Styles
+   ========================================== */
+.interest-single-p {
+    font-size: 17px;
+    color: #4a3b40;
+    line-height: 1.8;
+    text-indent: 2.5em !important;
+    text-align: justify;
+    margin-bottom: 16px;
 }
 
 .target-card-center {
-    text-align: center;
+    text-align: center !important;
 }
 
-.target-card-center h3 {
-    font-size: 22px;
-    color: #ff5c8a;
-    margin-bottom: 15px;
+.university-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.target-text-single-line {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 15px;
+.uni-item {
+    background: #fff0f3;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ffccd5;
 }
 
-.target-text-single-line .faculty-name {
+.uni-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.uni-item .faculty-name {
     font-weight: bold;
-    color: #ff5c8a;
+    color: #ff4d6d;
+    font-size: 18px;
     display: block;
 }
 
-.target-text-single-line .university-name {
-    color: #666;
-    display: block;
+.uni-item .university-name {
+    color: #555;
+    font-size: 16px;
 }
 
-/* ------------------------------------------
-   ส่วนรูปภาพทักษะ/ความสามารถพิเศษ
-   ------------------------------------------ */
+/* ==========================================
+   Education Page Styles
+   ========================================== */
+.edu-card p {
+    font-size: 18px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.edu-card .edu-level {
+    font-weight: 700;
+    color: #ff4d6d !important;
+    margin-right: 8px;
+}
+
+.edu-card .school-name {
+    color: #555555;
+}
+
+/* ==========================================
+   Foreword Page Styles
+   ========================================== */
+.content-card p.foreword-p {
+    font-size: 17px;
+    color: #4a3b40;
+    line-height: 1.8;
+    text-indent: 2.5em;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.foreword-author {
+    margin-top: 30px;
+    text-align: right !important;
+}
+
+.foreword-author .author-label {
+    font-weight: 700;
+    color: #ff4d6d !important;
+    margin-right: 6px;
+}
+
+.foreword-author .author-name {
+    font-weight: 600;
+    color: #ff8fa3 !important;
+}
+
+.foreword-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.foreword-img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(255, 143, 163, 0.2);
+}
+
+/* ==========================================
+   Activities Page Styles
+   ========================================== */
+.activity-card {
+    text-align: center !important;
+    padding: 30px 25px !important;
+}
+
+.activity-img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.activity-img {
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.activity-desc {
+    font-size: 16px;
+    color: #4a3b40;
+    line-height: 1.7;
+    text-align: left;
+    background: #fff0f3;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #ff758f;
+}
+
+/* ==========================================
+   Skills Page Styles (Vertical Clean Layout)
+   ========================================== */
 .skills-single-card {
-    padding: 35px 40px;
+    padding: 40px !important;
 }
 
 .skill-item {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .skill-item:last-child {
@@ -154,61 +318,43 @@ body {
 }
 
 .skill-item .skill-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: #ff5c8a;
-    text-align: left;
-    margin-bottom: 12px;
+    color: #ff4d6d !important;
+    margin-bottom: 15px;
+    display: block;
     position: relative;
-    padding-left: 22px;
+    padding-left: 25px;
 }
 
 .skill-item .skill-title::before {
     content: "♥";
-    color: #ff85a2;
-    font-size: 18px;
+    color: #ff758f;
+    font-size: 20px;
     position: absolute;
     left: 0;
-    top: -1px;
+    top: -2px;
 }
 
-.skill-img-wrapper {
+.skill-item .skill-img-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.skill-img {
+.skill-item .skill-img {
     width: 100%;
-    max-width: 450px;
-    height: 250px;
+    max-width: 500px;
+    height: 280px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(255, 143, 163, 0.2);
 }
 
-.skill-img:hover {
-    transform: scale(1.02);
-}
-
-/* Responsive */
+/* Responsive design */
 @media (max-width: 600px) {
-    .page-container {
-        width: 95%;
-        margin: 20px auto;
-    }
-    .profile-card, .content-card, .contact-box {
-        padding: 20px 20px;
-    }
-    .heading {
-        font-size: 24px;
-    }
-    .skill-img {
-        height: 180px;
-    }
-    .university-logo {
-        width: 90px;
-        height: 90px;
-    }
+    .page-container { width: 95%; }
+    .university-grid { grid-template-columns: 1fr; }
+    .profile-card, .content-card, .contact-box { padding: 20px; }
+    .heading { font-size: 24px; }
+    .skill-item .skill-img { height: 200px; }
 }
